@@ -1,0 +1,67 @@
+﻿a {
+    font-family: 'Times New Roman';
+    font-size: 20px !important;
+    color: #000000 !important;
+}
+
+.tbl {
+    border: inherit;
+}
+
+.list {
+    background: #fff;
+    text-align: center;
+}
+
+.header {
+    background: #d3d2d2;
+}
+
+.admin {
+    text-align: center;
+}
+
+.admin-title {
+    margin: 20px 0 20px 0;
+}
+
+
+.label {
+    color: #000000;
+    font-size: 25px;
+}
+
+.input {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: #aaa;
+}
+
+.button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: #4fc3f7;
+    font-family: 'Times New Roman';
+}
+
+.p {
+    padding: 21px 0 25px 0px;
+}
+
+.btn-back {
+    border-color: #c62828;
+}
+
+.btn-add {
+    background: #62ace1;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}
+
+.btn-edit {
+    background: #c62828;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}

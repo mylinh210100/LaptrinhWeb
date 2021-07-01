@@ -1,0 +1,64 @@
+﻿.phim-img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .phim-img .hinh-anh {
+        width: 100%;
+    }
+
+.phim__mota {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+}
+
+    .phim__mota .mo-ta {
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+.phim__overlay {
+    position: absolute;
+    top: 0;
+    left: -400%;
+    transform: skewX(30deg);
+    background: linear-gradient(to bottom, #fbbd61, #ec7532);
+    width: 300%;
+    height: 100%;
+    transition: all .5s;
+    opacity: 0.9;
+}
+
+.phim-img:hover .phim__overlay {
+    left: -100%;
+}
+
+.phim-img:hover .phim__mota {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1);
+}
+
+.phim-content .ten-phim {
+    height: 60px;
+}
+
+.phim-content .btn-xem {
+    border: 1px solid #ff6a00;
+    color: #ff6a00;
+    transition: all .3s;
+}
+
+    .phim-content .btn-xem:hover {
+        background-color: #ff772b;
+        color: black;
+    }

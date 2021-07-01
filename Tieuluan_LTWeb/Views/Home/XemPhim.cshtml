@@ -1,0 +1,76 @@
+﻿@model Model.Model.Phim
+@{
+    ViewBag.Title = "XemPhim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var cmt = (IEnumerable<Model.Model.BinhLuan>)ViewBag.Binhluan;
+
+    var sslogin = Session["login"] as Tieuluan_LTWeb.Models.SessionLogin;
+    var ssregis = Session["register"] as Model.Model.TaiKhoan;
+}
+<link href="~/Content/css/xemphim.css" rel="stylesheet" />
+<div class="container xem-phim">
+    <h3>@Model.TenPhim</h3>
+
+    <iframe class="phim-video" src="@Model.Link?autoplay=1"
+            title="YouTube video player" frameborder="0" allow="accelerometer;
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen allow='autoplay'></iframe>
+    <!--
+        <a class="btn" style="border-color:#971515" href="/">back</a>
+    -->
+</div>
+<div>
+    <h4>Lượt xem: @Model.LuotXem</h4>
+</div>
+<div class="binh-luan">
+
+    <div style="margin: 10px;">
+        <h2>Binh luan: </h2>
+        @foreach (var item in cmt)
+        {
+            <h4>@item.TenTaiKhoan</h4>
+            <p>@item.NoiDung</p>
+        }
+
+    </div>
+    <div>
+        <h3>Viet binh luan:</h3>
+    </div>
+    @if (sslogin == null && ssregis == null)
+    {
+        <div>
+            <input type="text" name="noidung" />
+            <a class="btn" style="border-color: #0094ff" href="/log-in">Dang </a>
+        </div>
+
+    }
+    else if (sslogin != null)
+    {
+        using (Html.BeginForm("VietBinhluan", "Binhluan"))
+        {
+            <div>
+                <input type="hidden" name="idPhim" value="@Model.idPhim" />
+                <input type="hidden" name="taikhoan" value="@sslogin.name" />
+                <input type="text" name="noidung" />
+                <br />
+                <button type="submit" class="btn" style="border-color: #0094ff">Dang</button>
+            </div>
+        }
+
+    }
+    else if (ssregis != null)
+    {
+        using (Html.BeginForm("VietBinhluan", "Binhluan"))
+        {
+            <div>
+                <input type="hidden" name="idPhim" value="@Model.idPhim" />
+                <input type="hidden" name="taikhoan" value="@ssregis.TenTaiKhoan" />
+                <input type="text" name="noidung" />
+                <br />
+                <button type="submit" class="btn" style="border-color: #0094ff">Dang</button>
+            </div>
+        }
+    }
+</div>
+

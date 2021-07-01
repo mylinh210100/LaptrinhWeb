@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Model.Model.ChuDe>
+
+<style>
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e9d8f4;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #58257b;
+                color: white;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<li class="nav-item">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#">Topic</a>
+        <div class="dropdown-content">
+            @foreach (var item in Model)
+            {
+                <a class="nav-link active" aria-current="page" href="/topic/@item.idChuDe">@item.tenChuDe</a>
+            }
+        </div>
+    </div>
+
+</li>
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Model.Model.Phim_ChuDe>
+@{
+    ViewBag.Title = "TopicFilm";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h2>Cac phim cua tung chu de</h2>
+    <div style="margin-bottom: 10px;">
+        <a class="btn-add" href="/topic/set-topic">Them</a>
+    </div>
+
+    <table class="table table-bordered" style="border:1px solid;">
+        <thead class="text-center">
+            <tr>
+                <th>Id Chu de</th>
+                <th>Id Phim</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="@item.idPhim">
+                    <td>@item.idChuDe</td>
+                    <td>@item.idPhim</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        @Html.ActionLink("Back", "Topic")
+    </div>
+</div>
+

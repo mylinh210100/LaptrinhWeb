@@ -1,0 +1,84 @@
+﻿@model Model.Model.Phim
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+<h2>Edit Phim</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Phim</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.idPhim)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenPhim, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenPhim, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenPhim, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MoTa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Anh, htmlAttributes: new { @class = "control-label col-md-2" })
+            @*<div class="col-md-10">
+                @Html.EditorFor(model => model.Anh, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Anh, "", new { @class = "text-danger" })
+            </div>*@
+            <div class="row container-fluid">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(model => model.Anh, new { htmlAttributes = new { @class = "form-control" }, id = "txtImg" })
+                    @Html.ValidationMessageFor(model => model.Anh, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-outline-success mt-2" type="button" id="btnselectImg" style=" font-size:15px;">
+                        Select Img
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back", "Film")
+</div>
+@section jsFooter{
+    <script>
+        $('#btnselectImg').on('click', function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImg').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+}

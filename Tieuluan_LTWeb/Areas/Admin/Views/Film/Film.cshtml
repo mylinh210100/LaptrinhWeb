@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Model.Model.Phim>
+@{
+    ViewBag.Title = "Film";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div class="container-fluid">
+    <h2>Phim</h2>
+    <div style="margin-bottom: 10px;">
+        <a class="btn-add" href="/film/insert">Them moi</a>
+    </div>
+
+    <table class="table" style="border:1px solid;">
+        <thead class="text-center">
+            <tr>
+                <th>Id</th>
+                <th>Ten Phim</th>
+                <th>Mo ta</th>
+                <th>Anh</th>
+                <th>Link</th>
+                <th>Luot xem</th>
+                <th colspan="2">Xu ly</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="@item.idPhim">
+                    <td>@item.idPhim</td>
+                    <td>@item.TenPhim</td>
+                    <td>@item.MoTa</td>
+                    <td><img src="@item.Anh" style="width: 100px; height:150px;" /></td>
+                    <td>@item.Link</td>
+                    <td>@item.LuotXem</td>
+                    <td><a href="/film/update/@item.idPhim">Sua</a></td>
+                    <td><a href="/film/delete/@item.idPhim">Xoa</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+

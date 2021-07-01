@@ -1,0 +1,11 @@
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\Model.dll.config
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\Model.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\Model.pdb
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\EntityFramework.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\EntityFramework.xml
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\obj\Debug\Model.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\Model\obj\Debug\Model.pdb

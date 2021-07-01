@@ -1,0 +1,15 @@
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\DataIO.dll.config
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\DataIO.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\DataIO.pdb
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\EntityFramework.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\Model.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\Model.pdb
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\Model.dll.config
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\EntityFramework.xml
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\obj\Debug\DataIO.csproj.AssemblyReference.cache
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\obj\Debug\DataIO.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\obj\Debug\DataIO.csproj.CopyComplete
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\obj\Debug\DataIO.dll
+C:\Users\ACER\source\repos\Tieuluan_LTWeb\DataIO\obj\Debug\DataIO.pdb
