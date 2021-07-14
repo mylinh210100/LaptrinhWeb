@@ -4,26 +4,25 @@
     Layout = null;
 }
 <link href="~/Areas/Admin/ContentAdmin/adminlogin.css" rel="stylesheet" />
-
 @using (Html.BeginForm("Login", "DangNhap", FormMethod.Post))
 {
-    @Html.ValidationSummary(false, "", new { @class = "text-danger" });
+    @*@Html.ValidationSummary(false, "", new { @class = "text-danger" });*@
     <div class="admin">
         <div class="admin-title">
-            <a class="title">Admin Dang nhap</a>
+            <a class="title">Admin Đăng nhập</a>
         </div>
         <div class="group">
-            <label for="user" class="label">Tai khoan</label>
+            <label for="user" class="label">Tài khoản</label>
             @Html.TextBoxFor(model => model.Username, new { @class = "input", @placeholder = "UserName", @autofocus = "autofocus" })
             @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
         </div>
         <div class="group mt-3">
-            <label for="pass" class="label">Mat khau</label>
+            <label for="pass" class="label">Mật khẩu</label>
             @Html.PasswordFor(model => model.Pass, new { @class = "input", @placeholder = "PassWord", @type = "password" })
             @Html.ValidationMessageFor(model => model.Pass, "", new { @class = "text-danger" })
         </div>
         <div class="group mt-3">
-            <button class="button" type="submit">Dang nhap</button>
+            <button class="button" type="submit">Đăng nhập</button>
         </div>
     </div>
 }

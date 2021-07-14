@@ -5,14 +5,13 @@
     Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
 }
 
-<h2>Edit Phim</h2>
+<h2>Chỉnh sửa thông tin Phim</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Phim</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.idPhim)
@@ -46,7 +45,7 @@
                 </div>
                 <div class="col-md-2">
                     <button class="btn btn-outline-success mt-2" type="button" id="btnselectImg" style=" font-size:15px;">
-                        Select Img
+                        Chọn ảnh
                     </button>
                 </div>
             </div>
@@ -62,14 +61,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Lưu" class="btn"  style="border-color: #ff0000; margin: 10px;"  />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back", "Film")
+    @Html.ActionLink("Trở về danh sách", "Film")
 </div>
 @section jsFooter{
     <script>

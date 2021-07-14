@@ -814,6 +814,7 @@
     <Content Include="Content\ckfinder\skins\v1\skin.js" />
     <Content Include="Content\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Content\ckfinder\translations.txt" />
+    <Content Include="Content\css\dangnhap.css" />
     <Content Include="Content\css\film.css" />
     <Content Include="Content\css\layout.css" />
     <Content Include="Content\css\xemphim.css" />

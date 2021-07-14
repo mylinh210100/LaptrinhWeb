@@ -9,19 +9,19 @@
 <div class="container-fluid">
     <h2>Phim</h2>
     <div style="margin-bottom: 10px;">
-        <a class="btn-add" href="/film/insert">Them moi</a>
+        <a class="btn-add" href="/film/insert">Thêm phim mới</a>
     </div>
 
-    <table class="table" style="border:1px solid;">
+    <table class="table table-bordered" style="border:1px solid;">
         <thead class="text-center">
             <tr>
                 <th>Id</th>
-                <th>Ten Phim</th>
-                <th>Mo ta</th>
-                <th>Anh</th>
+                <th>Tên phim</th>
+                <th>Mô tả</th>
+                <th>Ảnh</th>
                 <th>Link</th>
-                <th>Luot xem</th>
-                <th colspan="2">Xu ly</th>
+                <th>Lượt xem</th>
+                <th colspan="2">Hành động</th>
             </tr>
         </thead>
         <tbody>
@@ -34,8 +34,8 @@
                     <td><img src="@item.Anh" style="width: 100px; height:150px;" /></td>
                     <td>@item.Link</td>
                     <td>@item.LuotXem</td>
-                    <td><a href="/film/update/@item.idPhim">Sua</a></td>
-                    <td><a href="/film/delete/@item.idPhim">Xoa</a></td>
+                    <td><a href="/film/update/@item.idPhim">Sửa</a></td>
+                    <td><a href="/film/delete/@item.idPhim">Xóa</a></td>
                 </tr>
             }
         </tbody>

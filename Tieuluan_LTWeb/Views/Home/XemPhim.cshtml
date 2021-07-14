@@ -8,7 +8,9 @@
     var sslogin = Session["login"] as Tieuluan_LTWeb.Models.SessionLogin;
     var ssregis = Session["register"] as Model.Model.TaiKhoan;
 }
+
 <link href="~/Content/css/xemphim.css" rel="stylesheet" />
+
 <div class="container xem-phim">
     <h3>@Model.TenPhim</h3>
 
@@ -21,27 +23,39 @@
     -->
 </div>
 <div>
-    <h4>Lượt xem: @Model.LuotXem</h4>
+    <h4>Views: @Model.LuotXem</h4>
 </div>
 <div class="binh-luan">
 
     <div style="margin: 10px;">
-        <h2>Binh luan: </h2>
+        <h2>Comment: </h2>
         @foreach (var item in cmt)
         {
-            <h4>@item.TenTaiKhoan</h4>
-            <p>@item.NoiDung</p>
+            <div class="row comment">
+                <div class="col-1  text-center" style="margin-top: 20px;">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="col-11 binh-luan-detail">
+                    <span>
+                        <h4 class="ten-tai-khoan">@item.TenTaiKhoan</h4>
+                        <p class="noi-dung">@item.NoiDung</p>
+                    </span>
+                </div>
+            </div>
         }
 
     </div>
     <div>
-        <h3>Viet binh luan:</h3>
+        <h2>Add comment:</h2>
     </div>
     @if (sslogin == null && ssregis == null)
     {
-        <div>
-            <input type="text" name="noidung" />
-            <a class="btn" style="border-color: #0094ff" href="/log-in">Dang </a>
+        <!--luc chua dang nhap-->
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-12 d-flex">
+                <textarea type="text" name="noidung" class="soan-noi-dung form-control" placeholder="Cảm nhận của bạn về bộ phim này ..."></textarea>
+                <button class="btn btn-commnent" type="submit">OK</button>
+            </div>
         </div>
 
     }
@@ -49,12 +63,18 @@
     {
         using (Html.BeginForm("VietBinhluan", "Binhluan"))
         {
+            <!--luc dang nhap voi tai khoan co san-->
             <div>
                 <input type="hidden" name="idPhim" value="@Model.idPhim" />
                 <input type="hidden" name="taikhoan" value="@sslogin.name" />
-                <input type="text" name="noidung" />
-                <br />
-                <button type="submit" class="btn" style="border-color: #0094ff">Dang</button>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="col-12 d-flex">
+                        <textarea type="text" name="noidung" class="soan-noi-dung form-control" placeholder="Cảm nhận của bạn về bộ phim này ..."></textarea>
+                        <button class="btn btn-commnent" type="submit">OK</button>
+                    </div>
+                </div>
+
             </div>
         }
 
@@ -63,12 +83,16 @@
     {
         using (Html.BeginForm("VietBinhluan", "Binhluan"))
         {
+            <!--luc dang nhap voi tai khoan mới tạo-->
             <div>
                 <input type="hidden" name="idPhim" value="@Model.idPhim" />
                 <input type="hidden" name="taikhoan" value="@ssregis.TenTaiKhoan" />
-                <input type="text" name="noidung" />
-                <br />
-                <button type="submit" class="btn" style="border-color: #0094ff">Dang</button>
+                <div class="row">
+                    <div class="col-12 d-flex">
+                        <textarea type="text" name="noidung" class="soan-noi-dung form-control" placeholder="Cảm nhận của bạn về bộ phim này ..."></textarea>
+                        <button class="btn btn-commnent" type="submit">OK</button>
+                    </div>
+                </div>
             </div>
         }
     }

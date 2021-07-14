@@ -10,7 +10,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #e9d8f4;
+        background-color: #757070;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -24,7 +24,7 @@
         }
 
             .dropdown-content a:hover {
-                background-color: #58257b;
+                background-color: rgba(0,0,0,0.2);
                 color: white;
             }
 
@@ -35,7 +35,7 @@
 
 <li class="nav-item">
     <div class="dropdown">
-        <a class="nav-link active" aria-current="page" href="#">Topic</a>
+        <a class="nav-link active" aria-current="page" href="#" style="margin-top: 10px;">Topic</a>
         <div class="dropdown-content">
             @foreach (var item in Model)
             {

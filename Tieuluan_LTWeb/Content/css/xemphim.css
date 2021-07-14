@@ -3,3 +3,45 @@
     height: 700px;
     padding: 20px 0;
 }
+
+.binh-luan .fa {
+    font-size: 35px;
+    color: gray;
+    padding: 0px 5px 0 40px;
+}
+
+.binh-luan .comment {
+    margin-bottom: 10px;
+}
+
+.binh-luan .binh-luan-detail {
+    width: auto;
+    background-color: #ebe9e9;
+    border: 1px solid #ebe9e9;
+    border-radius: 10px;
+}
+
+    .binh-luan .binh-luan-detail .ten-tai-khoan {
+        font-weight: 600;
+    }
+
+.binh-luan .soan-noi-dung {
+    width: 32%;
+    margin-left: 90px;
+    border-radius: 15px;
+    border: 1px solid #ebe9e9;
+}
+
+.binh-luan .btn-commnent {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    transition: all .3s;
+    margin-left: 20px;
+}
+
+    .binh-luan .btn-commnent:hover {
+        background-color: #0d6efd;
+        color: white;
+    }

@@ -1,0 +1,19 @@
+﻿.title{
+    color: #9c1a1a;
+
+}
+
+.btn-dang-nhap {
+    border-color: #992c2c;
+    font-size: 20px;
+    margin: 10px;
+}
+.input {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: #aaa;
+}
+.have-acc{
+    font-size: 15px;
+}
